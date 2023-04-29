@@ -25,6 +25,7 @@
 	</script>
 	<noscript><img height="1" width="1" style="display:none"
 			src="https://www.facebook.com/tr?id=1620248748481826&ev=PageView&noscript=1" /></noscript>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -48,9 +49,12 @@
 					<h2>Виникла проблема з технікою?</h2>
 					<form class="form" action="">
 						<input class="input" type="text" placeholder="Ім'я">
-						<input class="input" type="number" placeholder="Номер телефону">
+						<p class="error form-error-name" style="color: red"></p>
+						<input class="input" type="number" placeholder="09364772809">
+						<p class="error form-error-phone" style="color: red"></p>
 						<textarea class="textarea" placeholder="Опишіть проблему"></textarea>
-						<button>Надіслати</button>
+						<div class="g-recaptcha" data-sitekey="6Ld2i8clAAAAAJL-Lc6mTEQEBSun-52o79oCZ-wD"></div>
+						<button class="form-btn" type="submit">Надіслати</button>
 					</form>
 				</div>
 			</div>
@@ -619,7 +623,8 @@
 		</div>
 	</section>
 
-	<script src="scripts/slider.js"></script>
+	<script type="module" src="scripts/slider.js"></script>
+	<script type="module" src="scripts/form.js"></script>
 </body>
 
 </html>
